@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "lib": ["dom", "esnext"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "pretty": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "es6"
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts"]
+}
