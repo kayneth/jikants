@@ -337,10 +337,10 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@types/got@^9.4.2":
-  version "9.4.2"
-  resolved "https://registry.yarnpkg.com/@types/got/-/got-9.4.2.tgz#8d5bf4156fced9355fc2880f10570ff276962f28"
-  integrity sha512-k9F2iT5+Ym1jmAGjZyLsd0P3F8XB+4/gntbkx6Lofu7JvRINVIHa+l+fufLqtrJhgUw7UZqTfA+S6McPNXlPug==
+"@types/got@^9.4.3":
+  version "9.4.3"
+  resolved "https://registry.yarnpkg.com/@types/got/-/got-9.4.3.tgz#199a395728fd846edfbcaf224836e341a09cdc32"
+  integrity sha512-hyDJGHrObckE8jOZza024tp2Y4/vVQVuesPbNMEc69Sr+eK3GlhUG3G7mWysoJgNhpvWAYso7CRMlQDlctNnUA==
   dependencies:
     "@types/node" "*"
     "@types/tough-cookie" "*"
