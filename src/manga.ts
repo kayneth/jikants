@@ -180,5 +180,6 @@ export default {
   pictures,
   recommendations,
   reviews,
-  stats
+  stats,
+  userUpdates
 };
