@@ -10,6 +10,7 @@ import { Pictures } from "./interfaces/manga/Pictures";
 import { Recommendations } from "./interfaces/manga/Recommendations";
 import { Reviews } from "./interfaces/manga/Reviews";
 import { Stats } from "./interfaces/manga/Stats";
+import { UserUpdates } from "./interfaces/manga/UserUpdates";
 
 // Utils
 import { api, Logger } from "./utils";
@@ -147,6 +148,25 @@ const stats = async (id: number) => {
     const { body } = await api(`/manga/${id}/stats`);
 
     return body as Stats;
+  } catch (error) {
+    Logger.error(error);
+  }
+};
+
+/**
+ * Fetches latest list updates made by users
+ *
+ * @param id - The manga id
+ * @param page - The page number
+ */
+const userUpdates = async (id: number, page: number = 1) => {
+  try {
+    ow(id, ow.number.positive);
+    ow(page, ow.number.positive);
+
+    const { body } = await api(`/manga/${id}/userupdates/${page}`);
+
+    return body as UserUpdates;
   } catch (error) {
     Logger.error(error);
   }
