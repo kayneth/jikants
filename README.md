@@ -1,6 +1,6 @@
 # jikants
 
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/Julien-Broyard/jikants.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Julien-Broyard/jikants/alerts/)[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Julien-Broyard/jikants.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Julien-Broyard/jikants/context:javascript)
+[![Build Status](https://travis-ci.com/Julien-Broyard/jikants.svg?branch=master)](https://travis-ci.com/Julien-Broyard/jikants)[![Total alerts](https://img.shields.io/lgtm/alerts/g/Julien-Broyard/jikants.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Julien-Broyard/jikants/alerts/)[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Julien-Broyard/jikants.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Julien-Broyard/jikants/context:javascript)
 
 > A wrapper for the jikan REST API.
 
