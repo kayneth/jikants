@@ -7,6 +7,7 @@ import { Forum } from "./interfaces/manga/Forum";
 import { MoreInfo } from "./interfaces/manga/MoreInfo";
 import { News } from "./interfaces/manga/News";
 import { Pictures } from "./interfaces/manga/Pictures";
+import { Recommendations } from "./interfaces/manga/Recommendations";
 import { Reviews } from "./interfaces/manga/Reviews";
 import { Stats } from "./interfaces/manga/Stats";
 
@@ -16,7 +17,7 @@ import { api, Logger } from "./utils";
 /**
  * Fetches the list of characters & staff members of the manga
  *
- * @param id - The anime id
+ * @param id - The manga id
  */
 const characters = async (id: number) => {
   try {
@@ -33,7 +34,7 @@ const characters = async (id: number) => {
 /**
  * Fetches forum topics related to the item
  *
- * @param id - The anime id
+ * @param id - The manga id
  */
 const forum = async (id: number) => {
   try {
@@ -50,7 +51,7 @@ const forum = async (id: number) => {
 /**
  * Fetches more info related to the item
  *
- * @param id - The anime id
+ * @param id - The manga id
  */
 const moreInfo = async (id: number) => {
   try {
@@ -67,7 +68,7 @@ const moreInfo = async (id: number) => {
 /**
  * Fetches news related to the item
  *
- * @param id - The anime id
+ * @param id - The manga id
  */
 const news = async (id: number) => {
   try {
@@ -84,7 +85,7 @@ const news = async (id: number) => {
 /**
  * Fetches pictures related to the item
  *
- * @param id - The anime id
+ * @param id - The manga id
  */
 const pictures = async (id: number) => {
   try {
@@ -99,9 +100,26 @@ const pictures = async (id: number) => {
 };
 
 /**
+ * Fetches recommendations and their weightage made by users
+ *
+ * @param id - The manga id
+ */
+const recommendations = async (id: number) => {
+  try {
+    ow(id, ow.number.positive);
+
+    const { body } = await api(`/manga/${id}/recommendations`);
+
+    return body as Recommendations;
+  } catch (error) {
+    Logger.error(error);
+  }
+};
+
+/**
  * Fetches reviews written by users
  *
- * @param id - The anime id
+ * @param id - The manga id
  * @param page - The page number
  */
 const reviews = async (id: number, page: number = 1) => {
@@ -120,7 +138,7 @@ const reviews = async (id: number, page: number = 1) => {
 /**
  * Fetches statistical information related to the item
  *
- * @param id - The anime id
+ * @param id - The manga id
  */
 const stats = async (id: number) => {
   try {
@@ -140,6 +158,7 @@ export default {
   moreInfo,
   news,
   pictures,
+  recommendations,
   reviews,
   stats
 };
