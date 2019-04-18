@@ -3,6 +3,7 @@ import ow from "ow";
 
 // Interfaces
 import { Characters } from "./interfaces/manga/Characters";
+import { Forum } from "./interfaces/manga/Forum";
 import { News } from "./interfaces/manga/News";
 import { Pictures } from "./interfaces/manga/Pictures";
 import { Stats } from "./interfaces/manga/Stats";
@@ -22,6 +23,23 @@ const characters = async (id: number) => {
     const { body } = await api(`/manga/${id}/characters`);
 
     return body as Characters;
+  } catch (error) {
+    Logger.error(error);
+  }
+};
+
+/**
+ * Fetches forum topics related to the item
+ *
+ * @param id - The anime id
+ */
+const forum = async (id: number) => {
+  try {
+    ow(id, ow.number.positive);
+
+    const { body } = await api(`/manga/${id}/forum`);
+
+    return body as Forum;
   } catch (error) {
     Logger.error(error);
   }
@@ -80,6 +98,7 @@ const stats = async (id: number) => {
 
 export default {
   characters,
+  forum,
   news,
   pictures,
   stats
