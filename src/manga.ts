@@ -7,6 +7,7 @@ import { Forum } from "./interfaces/manga/Forum";
 import { MoreInfo } from "./interfaces/manga/MoreInfo";
 import { News } from "./interfaces/manga/News";
 import { Pictures } from "./interfaces/manga/Pictures";
+import { Reviews } from "./interfaces/manga/Reviews";
 import { Stats } from "./interfaces/manga/Stats";
 
 // Utils
@@ -98,6 +99,25 @@ const pictures = async (id: number) => {
 };
 
 /**
+ * Fetches reviews written by users
+ *
+ * @param id - The anime id
+ * @param page - The page number
+ */
+const reviews = async (id: number, page: number = 1) => {
+  try {
+    ow(id, ow.number.positive);
+    ow(page, ow.number.positive);
+
+    const { body } = await api(`/manga/${id}/reviews/${page}`);
+
+    return body as Reviews;
+  } catch (error) {
+    Logger.error(error);
+  }
+};
+
+/**
  * Fetches statistical information related to the item
  *
  * @param id - The anime id
@@ -120,5 +140,6 @@ export default {
   moreInfo,
   news,
   pictures,
+  reviews,
   stats
 };
