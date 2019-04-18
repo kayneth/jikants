@@ -16,7 +16,6 @@
 
 ## Todo
 
-TODO : Add tests (Ava ? Jest ? Other ?)
 TODO : ADD CI/CD (Travis)
 TODO : Put more badges
 TODO : Add TSDoc
