@@ -5,6 +5,7 @@ import ow from "ow";
 import { Characters } from "./interfaces/manga/Characters";
 import { News } from "./interfaces/manga/News";
 import { Pictures } from "./interfaces/manga/Pictures";
+import { Stats } from "./interfaces/manga/Stats";
 
 // Utils
 import { api, Logger } from "./utils";
@@ -60,7 +61,26 @@ const pictures = async (id: number) => {
   }
 };
 
+/**
+ * Fetches statistical information related to the item
+ *
+ * @param id - The anime id
+ */
+const stats = async (id: number) => {
+  try {
+    ow(id, ow.number.positive);
+
+    const { body } = await api(`/manga/${id}/stats`);
+
+    return body as Stats;
+  } catch (error) {
+    Logger.error(error);
+  }
+};
+
 export default {
   characters,
-  news
+  news,
+  pictures,
+  stats
 };
