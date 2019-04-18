@@ -53,7 +53,7 @@
     "lint": "yarn tslint && yarn prettier",
     "pre-commit": "yarn lint",
     "prettier": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\"",
-    "test": "ava",
+    "test": "ava -T 30000",
     "tslint": "tslint --project tsconfig.json --fix"
   },
   "version": "1.0.0"
