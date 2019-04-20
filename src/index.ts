@@ -12,7 +12,3 @@ export default {
   Person,
   Search
 };
-
-Search.search("Blu", "anime", 1, { rated: "g", limit: 1 }).then(b => {
-  if (b) console.log(b);
-});
