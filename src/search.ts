@@ -13,8 +13,8 @@ import { api, baseUrl, Logger } from "./utils";
  *
  * @param query - The query of the search
  * @param type - The type to search
- * @param filters - The list of filters to add
  * @param page - The page number
+ * @param filters - The list of filters to add
  */
 const search = async (
   query: string,
