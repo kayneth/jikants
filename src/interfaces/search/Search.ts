@@ -9,7 +9,7 @@ export interface Filters {
   status?: Status;
 }
 
-export type Rated = "g" | "pg" | "pg13" | "r17" | "r" | "rx";
+type Rated = "g" | "pg" | "pg13" | "r17" | "r" | "rx";
 
 export interface Search {
   readonly request_hash: string;
@@ -36,7 +36,7 @@ export type SearchTypes =
   | "special"
   | "tv";
 
-export type Status = "airing" | "completed" | "complete" | "tba" | "upcoming";
+type Status = "airing" | "completed" | "complete" | "tba" | "upcoming";
 
 interface Result {
   readonly airing: boolean;
