@@ -1,39 +1,39 @@
 export type Seasons = "summer" | "spring" | "fall" | "winter";
 
 export interface Season {
-  request_hash: string;
-  request_cached: boolean;
-  request_cache_expiry: number;
-  season_name: string;
-  season_year: number;
-  anime: Anime[];
+  readonly anime: Anime[];
+  readonly request_cache_expiry: number;
+  readonly request_cached: boolean;
+  readonly request_hash: string;
+  readonly season_name: string;
+  readonly season_year: number;
 }
 
 interface Anime {
-  mal_id: number;
-  url: string;
-  title: string;
-  image_url: string;
-  synopsis: string;
-  type: AnimeType;
-  airing_start: Date | null;
-  episodes: number | null;
-  members: number;
-  genres: Genre[];
-  source: Source;
-  producers: Genre[];
-  score: number | null;
-  licensors: string[];
-  r18: boolean;
-  kids: boolean;
-  continuing: boolean;
+  readonly airing_start: Date | null;
+  readonly continuing: boolean;
+  readonly episodes: number | null;
+  readonly genres: Genre[];
+  readonly image_url: string;
+  readonly kids: boolean;
+  readonly licensors: string[];
+  readonly mal_id: number;
+  readonly members: number;
+  readonly producers: Genre[];
+  readonly r18: boolean;
+  readonly score: number | null;
+  readonly source: Source;
+  readonly synopsis: string;
+  readonly title: string;
+  readonly type: AnimeType;
+  readonly url: string;
 }
 
 interface Genre {
-  mal_id: number;
-  type: GenreType;
-  name: string;
-  url: string;
+  readonly mal_id: number;
+  readonly name: string;
+  readonly type: GenreType;
+  readonly url: string;
 }
 
 enum GenreType {

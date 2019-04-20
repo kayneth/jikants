@@ -1,13 +1,13 @@
 export interface SeasonArchive {
-  request_hash: string;
-  request_cached: boolean;
-  request_cache_expiry: number;
-  archive: Archive[];
+  readonly archive: Archive[];
+  readonly request_cache_expiry: number;
+  readonly request_cached: boolean;
+  readonly request_hash: string;
 }
 
 interface Archive {
-  year: number;
-  seasons: Season[];
+  readonly year: number;
+  readonly seasons: Season[];
 }
 
 enum Season {
