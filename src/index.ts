@@ -3,6 +3,7 @@ import Anime from "./anime";
 import Character from "./character";
 import Club from "./club";
 import Genre from "./genre";
+import Magazine from './magazine'
 import Manga from "./manga";
 import Meta from "./meta";
 import Person from "./person";
@@ -17,6 +18,7 @@ export default {
   Character,
   Club,
   Genre,
+  Magazine,
   Manga,
   Meta,
   Person,
