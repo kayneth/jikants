@@ -1,6 +1,7 @@
 // Imports
 import Anime from "./anime";
 import Character from "./character";
+import Club from "./club";
 import Genre from "./genre";
 import Manga from "./manga";
 import Meta from "./meta";
@@ -13,6 +14,7 @@ import Top from "./top";
 export default {
   Anime,
   Character,
+  Club,
   Genre,
   Manga,
   Meta,
