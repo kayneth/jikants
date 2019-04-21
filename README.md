@@ -17,7 +17,9 @@
 ## Todo
 
 TODO : Put more badges
-TODO : Add TSDoc
+TODO : Add TSDoc and put it online with netlify
+TODO : Add labels for issues
+TODO : Improve interfaces
 
 ## Install
 
