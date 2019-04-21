@@ -1,9 +1,9 @@
 // Imports
 import got from "got";
-import LRU from "quick-lru";
-import pino from "pino";
 import PMemoize from "p-memoize";
 import PQueue from "p-queue";
+import pino from "pino";
+import LRU from "quick-lru";
 
 // package.json
 import pkg from "../package.json";
@@ -22,7 +22,7 @@ const http = got.extend({
 });
 
 // Memoized http client
-export const api = PMemoize(http, { cache: new LRU({ maxSize: 4000 }) });
+export const api = PMemoize(http, { cache: new LRU({ maxSize: 1000 }) });
 
 // Fast JSON logger
 export const Logger = pino({
