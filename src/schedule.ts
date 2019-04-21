@@ -2,7 +2,7 @@
 import { Days, Schedule } from "./interfaces/schedule/Schedule";
 
 // Utils
-import { api, queue, Logger } from "./utils";
+import { api, Logger, queue } from "./utils";
 
 /**
  * Fetches anime schedule of the week or specified day

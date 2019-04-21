@@ -13,7 +13,7 @@ import { Stats } from "./interfaces/manga/Stats";
 import { UserUpdates } from "./interfaces/manga/UserUpdates";
 
 // Utils
-import { api, queue, Logger } from "./utils";
+import { api, Logger, queue } from "./utils";
 
 /**
  * Fetches the list of characters & staff members of the manga

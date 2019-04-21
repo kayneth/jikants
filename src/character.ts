@@ -5,7 +5,7 @@ import ow from "ow";
 import { Pictures } from "./interfaces/character/Pictures";
 
 // Utils
-import { api, queue, Logger } from "./utils";
+import { api, Logger, queue } from "./utils";
 
 /**
  * Fetches pictures related to the item

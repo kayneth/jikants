@@ -6,7 +6,7 @@ import { URL } from "url";
 import { Filters, Search, SearchTypes } from "./interfaces/search/Search";
 
 // Utils
-import { api, baseUrl, queue, Logger } from "./utils";
+import { api, baseUrl, Logger, queue } from "./utils";
 
 /**
  * Search method

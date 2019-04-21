@@ -16,7 +16,7 @@ import { UserUpdates } from "./interfaces/anime/UserUpdates";
 import { Videos } from "./interfaces/anime/Videos";
 
 // Utils
-import { api, queue, Logger } from "./utils";
+import { api, Logger, queue } from "./utils";
 
 /**
  * Fetches the anime with the given ID

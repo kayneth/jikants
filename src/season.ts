@@ -7,7 +7,7 @@ import { SeasonArchive } from "./interfaces/season/SeasonArchive";
 import { SeasonLater } from "./interfaces/season/SeasonLater";
 
 // Utils
-import { api, queue, Logger } from "./utils";
+import { api, Logger, queue } from "./utils";
 
 /**
  * Fetches anime of the specified season
