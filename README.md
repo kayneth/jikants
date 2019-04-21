@@ -16,26 +16,102 @@
 
 ## Todo
 
-TODO : Put more badges
-TODO : Add TSDoc and put it online with netlify
-TODO : Add labels for issues
 TODO : Improve interfaces
 
 ## Install
 
 ```
-
+$ npm install jikants
+$ yarn add jikants
 ```
 
 ## Usage
 
-```
+```js
+const JikanTS = require("jikants");
 
+/* WITH ES6 */
+
+import JikanTS from "jikants";
 ```
 
 ## API
 
-TODO
+```js
+const JikanTS = require("jikants");
+
+/* ANIME */
+JikanTS.Anime.byId(1).then(b => console.log(b));
+JikanTS.Anime.charactersStaff(1).then(b => console.log(b));
+JikanTS.Anime.episodes(1).then(b => console.log(b));
+JikanTS.Anime.forum(1).then(b => console.log(b));
+JikanTS.Anime.moreInfo(1).then(b => console.log(b));
+JikanTS.Anime.news(1).then(b => console.log(b));
+JikanTS.Anime.pictures(1).then(b => console.log(b));
+JikanTS.Anime.recommendations(1).then(b => console.log(b));
+JikanTS.Anime.reviews(1).then(b => console.log(b));
+JikanTS.Anime.stats(1).then(b => console.log(b));
+JikanTS.Anime.userUpdates(1).then(b => console.log(b));
+JikanTS.Anime.videos(1).then(b => console.log(b));
+
+/* CHARACTER */
+JikanTS.Character.pictures(1).then(b => console.log(b));
+
+/* CLUB */
+JikanTS.Club.info(1).then(b => console.log(b));
+JikanTS.Club.members(1).then(b => console.log(b));
+
+/* GENRE */
+JikanTS.Genre.anime(1).then(b => console.log(b));
+JikanTS.Genre.manga(1).then(b => console.log(b));
+
+/* MAGAZINE */
+JikanTS.Magazine.get(1).then(b => console.log(b));
+
+/* MANGA */
+JikanTS.Manga.characters(1).then(b => console.log(b));
+JikanTS.Manga.forum(1).then(b => console.log(b));
+JikanTS.Manga.moreInfo(1).then(b => console.log(b));
+JikanTS.Manga.news(1).then(b => console.log(b));
+JikanTS.Manga.pictures(1).then(b => console.log(b));
+JikanTS.Manga.recommendations(1).then(b => console.log(b));
+JikanTS.Manga.reviews(1).then(b => console.log(b));
+JikanTS.Manga.stats(1).then(b => console.log(b));
+JikanTS.Manga.userUpdates(1).then(b => console.log(b));
+
+/* META */
+JikanTS.Meta.requests("anime", "today").then(b => console.log(b));
+JikanTS.Meta.status().then(b => console.log(b));
+
+/* PERSON */
+JikanTS.Person.pictures(1).then(b => console.log(b));
+
+/* PRODUCER */
+JikanTS.Producer.get(1).then(b => console.log(b));
+
+/* SCHEDULE */
+JikanTS.Schedule.animeSchedule("sunday").then(b => console.log(b));
+
+/* SEARCH */
+JikanTS.Search.search("Blue", "anime", 1, { limit: 1 }).then(b =>
+  console.log(b)
+);
+
+/* SEASON */
+JikanTS.Season.seasonAnime(2018, "winter").then(b => console.log(b));
+JikanTS.Season.seasonArchive(s).then(b => console.log(b));
+JikanTS.Season.seasonLater().then(b => console.log(b));
+
+/* TOP */
+JikanTS.Season.topItems("anime", 1, "airing").then(b => console.log(b));
+
+/* USER */
+JikanTS.User.animeList("myusername", "all", 1).then(b => console.log(b));
+JikanTS.User.friends("myusername", 2).then(b => console.log(b));
+JikanTS.User.history("myusername", "both").then(b => console.log(b));
+JikanTS.User.mangaList("myusername", "all").then(b => console.log(b));
+JikanTS.User.profile("myusername").then(b => console.log(b));
+```
 
 ## Maintainers
 
