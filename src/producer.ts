@@ -8,9 +8,9 @@ import { Magazine } from "./interfaces/magazine/Magazine";
 import { api, Logger, queue } from "./utils";
 
 /**
- * Fetches manga by the specified Magazine/Serializer/Publisher
+ * Fetches anime/manga by the specified Producer/Studio/Licensor
  *
- * @param id - The magazine id
+ * @param id - The producer id
  */
 const get = async (id: number, page: number = 1) => {
   try {
@@ -18,7 +18,7 @@ const get = async (id: number, page: number = 1) => {
     ow(page, ow.number.positive);
 
     const { body } = await queue.add(
-      async () => await api(`/magazine/${id}/${page}`, {})
+      async () => await api(`/producer/${id}/${page}`, {})
     );
 
     return body as Magazine;
