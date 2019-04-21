@@ -19,9 +19,9 @@ const topItems = async (type: Types, page: number = 1, subType?: SubTypes) => {
     ow(page, ow.number.positive);
 
     if (subType) {
-      const { body } = await api(`/top/${type}/${page}/${subType}`);
+      const result = await api(`/top/${type}/${page}/${subType}`);
 
-      return body as Result;
+      return result.body as Result;
     }
 
     const { body } = await api(`/top/${type}/${page}`);
@@ -31,10 +31,6 @@ const topItems = async (type: Types, page: number = 1, subType?: SubTypes) => {
     Logger.error(error);
   }
 };
-
-topItems("manga", 1).then(b => {
-  if (b) console.log(JSON.stringify(b));
-});
 
 export default {
   topItems
