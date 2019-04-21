@@ -13,10 +13,10 @@ export interface Schedule {
   readonly request_hash: string;
   readonly request_cached: boolean;
   readonly request_cache_expiry: number;
-  readonly monday: Monday[];
+  readonly monday: Day[];
 }
 
-interface Monday {
+interface Day {
   readonly airing_start: Date;
   readonly episodes: number | null;
   readonly genres: Genre[];

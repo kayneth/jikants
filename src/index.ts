@@ -6,6 +6,7 @@ import Person from "./person";
 import Schedule from "./schedule";
 import Search from "./search";
 import Season from "./season";
+import Top from "./top";
 
 export default {
   Anime,
@@ -14,5 +15,6 @@ export default {
   Person,
   Schedule,
   Search,
-  Season
+  Season,
+  Top
 };

@@ -11,9 +11,9 @@ import { api, baseUrl, Logger } from "./utils";
 /**
  * Search method
  *
- * @param query - The query of the search
- * @param type - The type to search
- * @param page - The page number
+ * @param query - The query you want to search
+ * @param type - Specify where to search
+ * @param page - The page number of the results
  * @param filters - The list of filters to add
  */
 const search = async (
