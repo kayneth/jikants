@@ -38,7 +38,7 @@ import JikanTS from "jikants";
 ## API
 
 ```js
-const JikanTS = require("jikants");
+const JikanTS = require("jikants").default;
 
 /* ANIME */
 JikanTS.Anime.byId(1).then(b => console.log(b));

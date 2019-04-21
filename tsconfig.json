@@ -4,7 +4,6 @@
     "alwaysStrict": true,
     "baseUrl": "src",
     "declaration": true,
-    "declarationDir": "./dist/typings",
     "esModuleInterop": true,
     "lib": ["es2017", "es7", "es6", "dom"],
     "module": "commonjs",
