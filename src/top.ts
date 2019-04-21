@@ -19,11 +19,11 @@ const topItems = async (type: Types, page: number = 1, subType?: SubTypes) => {
     ow(page, ow.number.positive);
 
     if (subType) {
-      const { body } = await queue.add(
+      const result = await queue.add(
         async () => await api(`/top/${type}/${page}/${subType}`, {})
       );
 
-      return body as Result;
+      return result.body as Result;
     }
 
     const { body } = await queue.add(
