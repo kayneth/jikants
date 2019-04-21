@@ -19,12 +19,12 @@ const topItems = async (type: Types, page: number = 1, subType?: SubTypes) => {
     ow(page, ow.number.positive);
 
     if (subType) {
-      const result = await api(`/top/${type}/${page}/${subType}`);
+      const result = await api(`/top/${type}/${page}/${subType}`, {});
 
       return result.body as Result;
     }
 
-    const { body } = await api(`/top/${type}/${page}`);
+    const { body } = await api(`/top/${type}/${page}`, {});
 
     return body as Result;
   } catch (error) {
