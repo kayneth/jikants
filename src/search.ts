@@ -6,7 +6,7 @@ import { URL } from "url";
 import { Filters, Search, SearchTypes } from "./interfaces/search/Search";
 
 // Utils
-import { api, baseUrl, Logger } from "./utils";
+import { api, baseUrl, queue, Logger } from "./utils";
 
 /**
  * Search method
@@ -54,7 +54,7 @@ const search = async (
       });
     }
 
-    const { body } = await api(url.href);
+    const { body } = await queue.add(async () => await api(url.href, {}));
 
     return body as Search;
   } catch (error) {

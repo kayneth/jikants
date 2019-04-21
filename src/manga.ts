@@ -13,7 +13,7 @@ import { Stats } from "./interfaces/manga/Stats";
 import { UserUpdates } from "./interfaces/manga/UserUpdates";
 
 // Utils
-import { api, Logger } from "./utils";
+import { api, queue, Logger } from "./utils";
 
 /**
  * Fetches the list of characters & staff members of the manga
@@ -24,7 +24,9 @@ const characters = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/manga/${id}/characters`);
+    const { body } = await queue.add(
+      async () => await api(`/manga/${id}/characters`, {})
+    );
 
     return body as Characters;
   } catch (error) {
@@ -41,7 +43,9 @@ const forum = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/manga/${id}/forum`);
+    const { body } = await queue.add(
+      async () => await api(`/manga/${id}/forum`, {})
+    );
 
     return body as Forum;
   } catch (error) {
@@ -58,7 +62,9 @@ const moreInfo = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/manga/${id}/moreinfo`);
+    const { body } = await queue.add(
+      async () => await api(`/manga/${id}/moreinfo`, {})
+    );
 
     return body as MoreInfo;
   } catch (error) {
@@ -75,7 +81,9 @@ const news = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/manga/${id}/news`);
+    const { body } = await queue.add(
+      async () => await api(`/manga/${id}/news`, {})
+    );
 
     return body as News;
   } catch (error) {
@@ -92,7 +100,9 @@ const pictures = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/manga/${id}/pictures`);
+    const { body } = await queue.add(
+      async () => await api(`/manga/${id}/pictures`, {})
+    );
 
     return body as Pictures;
   } catch (error) {
@@ -109,7 +119,9 @@ const recommendations = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/manga/${id}/recommendations`);
+    const { body } = await queue.add(
+      async () => await api(`/manga/${id}/recommendations`, {})
+    );
 
     return body as Recommendations;
   } catch (error) {
@@ -128,7 +140,9 @@ const reviews = async (id: number, page: number = 1) => {
     ow(id, ow.number.positive);
     ow(page, ow.number.positive);
 
-    const { body } = await api(`/manga/${id}/reviews/${page}`);
+    const { body } = await queue.add(
+      async () => await api(`/manga/${id}/reviews/${page}`, {})
+    );
 
     return body as Reviews;
   } catch (error) {
@@ -145,7 +159,9 @@ const stats = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/manga/${id}/stats`);
+    const { body } = await queue.add(
+      async () => await api(`/manga/${id}/stats`, {})
+    );
 
     return body as Stats;
   } catch (error) {
@@ -164,7 +180,9 @@ const userUpdates = async (id: number, page: number = 1) => {
     ow(id, ow.number.positive);
     ow(page, ow.number.positive);
 
-    const { body } = await api(`/manga/${id}/userupdates/${page}`);
+    const { body } = await queue.add(
+      async () => await api(`/manga/${id}/userupdates/${page}`, {})
+    );
 
     return body as UserUpdates;
   } catch (error) {

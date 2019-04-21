@@ -7,7 +7,7 @@ import { SeasonArchive } from "./interfaces/season/SeasonArchive";
 import { SeasonLater } from "./interfaces/season/SeasonLater";
 
 // Utils
-import { api, Logger } from "./utils";
+import { api, queue, Logger } from "./utils";
 
 /**
  * Fetches anime of the specified season
@@ -19,7 +19,9 @@ const seasonAnime = async (year: number, season: Seasons) => {
   try {
     ow(year, ow.number.positive);
 
-    const { body } = await api(`/season/${year}/${season}`);
+    const { body } = await queue.add(
+      async () => await api(`/season/${year}/${season}`, {})
+    );
 
     return body as Season;
   } catch (error) {
@@ -32,7 +34,9 @@ const seasonAnime = async (year: number, season: Seasons) => {
  */
 const seasonArchive = async () => {
   try {
-    const { body } = await api("/season/archive");
+    const { body } = await queue.add(
+      async () => await api("/season/archive", {})
+    );
 
     return body as SeasonArchive;
   } catch (error) {
@@ -45,7 +49,9 @@ const seasonArchive = async () => {
  */
 const seasonLater = async () => {
   try {
-    const { body } = await api("/season/later");
+    const { body } = await queue.add(
+      async () => await api("/season/later", {})
+    );
 
     return body as SeasonLater;
   } catch (error) {

@@ -16,7 +16,7 @@ import { UserUpdates } from "./interfaces/anime/UserUpdates";
 import { Videos } from "./interfaces/anime/Videos";
 
 // Utils
-import { api, Logger } from "./utils";
+import { api, queue, Logger } from "./utils";
 
 /**
  * Fetches the anime with the given ID
@@ -27,7 +27,7 @@ const byId = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/anime/${id}`);
+    const { body } = await queue.add(async () => await api(`/anime/${id}`, {}));
 
     return body as AnimeById;
   } catch (error) {
@@ -44,7 +44,9 @@ const charactersStaff = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api.get(`/anime/${id}/characters_staff`);
+    const { body } = await queue.add(
+      async () => await api(`/anime/${id}/characters_staff`, {})
+    );
 
     return body as CharactersStaff;
   } catch (error) {
@@ -63,7 +65,9 @@ const episodes = async (id: number, page: number = 1) => {
     ow(id, ow.number.positive);
     ow(page, ow.number.positive);
 
-    const { body } = await api(`/anime/${id}/episodes/${page}`);
+    const { body } = await queue.add(
+      async () => await api(`/anime/${id}/episodes/${page}`, {})
+    );
 
     return body as Episodes;
   } catch (error) {
@@ -80,7 +84,9 @@ const forum = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/anime/${id}/forum`);
+    const { body } = await queue.add(
+      async () => await api(`/anime/${id}/forum`, {})
+    );
 
     return body as Forum;
   } catch (error) {
@@ -97,7 +103,9 @@ const moreInfo = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/anime/${id}/moreinfo`);
+    const { body } = await queue.add(
+      async () => await api(`/anime/${id}/moreinfo`, {})
+    );
 
     return body as MoreInfo;
   } catch (error) {
@@ -114,7 +122,9 @@ const news = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/anime/${id}/news`);
+    const { body } = await queue.add(
+      async () => await api(`/anime/${id}/news`, {})
+    );
 
     return body as News;
   } catch (error) {
@@ -131,7 +141,9 @@ const pictures = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/anime/${id}/pictures`);
+    const { body } = await queue.add(
+      async () => await api(`/anime/${id}/pictures`, {})
+    );
 
     return body as Pictures;
   } catch (error) {
@@ -148,7 +160,9 @@ const recommendations = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/anime/${id}/recommendations`);
+    const { body } = await queue.add(
+      async () => await api(`/anime/${id}/recommendations`, {})
+    );
 
     return body as Recommendations;
   } catch (error) {
@@ -167,7 +181,9 @@ const reviews = async (id: number, page: number = 1) => {
     ow(id, ow.number.positive);
     ow(page, ow.number.positive);
 
-    const { body } = await api(`/anime/${id}/reviews/${page}`);
+    const { body } = await queue.add(
+      async () => await api(`/anime/${id}/reviews/${page}`, {})
+    );
 
     return body as Reviews;
   } catch (error) {
@@ -184,7 +200,9 @@ const stats = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/anime/${id}/stats`);
+    const { body } = await queue.add(
+      async () => await api(`/anime/${id}/stats`, {})
+    );
 
     return body as Stats;
   } catch (error) {
@@ -203,7 +221,9 @@ const userUpdates = async (id: number, page: number = 1) => {
     ow(id, ow.number.positive);
     ow(page, ow.number.positive);
 
-    const { body } = await api(`/anime/${id}/userupdates/${page}`);
+    const { body } = await queue.add(
+      async () => await api(`/anime/${id}/userupdates/${page}`, {})
+    );
 
     return body as UserUpdates;
   } catch (error) {
@@ -220,7 +240,9 @@ const videos = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/anime/${id}/videos`);
+    const { body } = await queue.add(
+      async () => await api(`/anime/${id}/videos`, {})
+    );
 
     return body as Videos;
   } catch (error) {

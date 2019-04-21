@@ -5,7 +5,7 @@ import ow from "ow";
 import { Pictures } from "./interfaces/person/Pictures";
 
 // Utils
-import { api, Logger } from "./utils";
+import { api, queue, Logger } from "./utils";
 
 /**
  * Fetches pictures related to the item
@@ -16,7 +16,9 @@ const pictures = async (id: number) => {
   try {
     ow(id, ow.number.positive);
 
-    const { body } = await api(`/person/${id}/pictures`);
+    const { body } = await queue.add(
+      async () => await api(`/person/${id}/pictures`, {})
+    );
 
     return body as Pictures;
   } catch (error) {
