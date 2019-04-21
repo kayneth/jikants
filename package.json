@@ -26,6 +26,7 @@
     "ts-node": "^8.1.0",
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.14.2",
     "typescript": "^3.4.4"
   },
   "homepage": "https://github.com/Julien-Broyard/jikants#readme",
@@ -43,6 +44,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "docs": "typedoc --out docs ./src --mode file",
     "lint": "yarn tslint && yarn prettier",
     "pre-commit": "yarn lint",
     "prettier": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\"",
