@@ -5,7 +5,7 @@ import ow from "ow";
 import { Result, SubTypes, Types } from "./interfaces/top/Top";
 
 // Utils
-import { api, Logger } from "./utils";
+import { api, Logger, queue } from "./utils";
 
 /**
  * Fetches top items on MyAnimeList
@@ -19,12 +19,16 @@ const topItems = async (type: Types, page: number = 1, subType?: SubTypes) => {
     ow(page, ow.number.positive);
 
     if (subType) {
-      const result = await api(`/top/${type}/${page}/${subType}`, {});
+      const { body } = await queue.add(
+        async () => await api(`/top/${type}/${page}/${subType}`, {})
+      );
 
-      return result.body as Result;
+      return body as Result;
     }
 
-    const { body } = await api(`/top/${type}/${page}`, {});
+    const { body } = await queue.add(
+      async () => await api(`/top/${type}/${page}`, {})
+    );
 
     return body as Result;
   } catch (error) {
