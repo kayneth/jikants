@@ -2,18 +2,20 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
-    "baseUrl": "./src",
+    "baseUrl": "src",
+    "declaration": true,
+    "declarationDir": "./dist/typings",
     "esModuleInterop": true,
-    "lib": ["dom", "esnext"],
+    "lib": ["es2017", "es7", "es6", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "./dist",
+    "outDir": "dist",
     "pretty": true,
     "removeComments": true,
     "resolveJsonModule": true,
     "strict": true,
-    "target": "es6"
+    "target": "es5"
   },
-  "exclude": ["node_modules", "tests/**/*.ts"],
+  "exclude": ["node_modules", "tests/**/*.ts", "dist/**/*.ts"],
   "include": ["src/**/*.ts"]
 }

@@ -29,15 +29,25 @@
     "typedoc": "^0.14.2",
     "typescript": "^3.4.4"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "homepage": "https://github.com/Julien-Broyard/jikants#readme",
   "husky": {
     "hooks": {
       "pre-commit": "yarn pre-commit"
     }
   },
+  "keywords": [
+    "api-wrapper",
+    "api",
+    "jikan",
+    "typescript",
+    "wrapper"
+  ],
   "license": "MPL-2.0",
+  "main": "dist/src/index.js",
   "name": "jikants",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/Julien-Broyard/jikants"
@@ -50,5 +60,6 @@
     "prettier": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\"",
     "tslint": "tslint --project tsconfig.json --fix"
   },
+  "types": "dist/typings/index.d.ts",
   "version": "1.0.0"
 }
