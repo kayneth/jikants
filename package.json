@@ -61,5 +61,5 @@
     "tslint": "tslint --project tsconfig.json --fix"
   },
   "types": "dist/typings/index.d.ts",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
