@@ -2,13 +2,13 @@
 import ow from "ow";
 
 // Interfaces
-import { Magazine } from "./interfaces/magazine/Magazine";
+import { Producer } from "./interfaces/producer/Producer";
 
 // Utils
 import { api, Logger, queue } from "./utils";
 
 /**
- * Fetches anime/manga by the specified Producer/Studio/Licensor
+ * Fetches anime by the specified Producer/Studio/Licensor
  *
  * @param id - The producer id
  */
@@ -21,7 +21,7 @@ const get = async (id: number, page: number = 1) => {
       async () => await api(`/producer/${id}/${page}`, {})
     );
 
-    return body as Magazine;
+    return body as Producer;
   } catch (error) {
     Logger.error(error);
   }

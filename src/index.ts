@@ -7,6 +7,7 @@ import Magazine from "./magazine";
 import Manga from "./manga";
 import Meta from "./meta";
 import Person from "./person";
+import Producer from "./producer";
 import Schedule from "./schedule";
 import Search from "./search";
 import Season from "./season";
@@ -22,6 +23,7 @@ export default {
   Manga,
   Meta,
   Person,
+  Producer,
   Schedule,
   Search,
   Season,
