@@ -28,7 +28,7 @@ $ yarn add jikants
 ## Usage
 
 ```js
-const JikanTS = require("jikants");
+const JikanTS = require("jikants").default
 
 /* WITH ES6 */
 
