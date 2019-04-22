@@ -803,9 +803,9 @@ pify@^3.0.0:
   integrity sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=
 
 pino-pretty@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/pino-pretty/-/pino-pretty-2.6.0.tgz#05e69e5d458e8b304936e0097045c38c382e7c27"
-  integrity sha512-0mrKDOCI35tb8Wjrg793ZE+AyFZYivUH7ekJdcd41RJik32BT7cgLsq/Kjh8+lvQa+Mx2PghptN1x0tsO2Trvw==
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/pino-pretty/-/pino-pretty-2.6.1.tgz#b5a8e28137deb1629428931d98c708b51f0e9555"
+  integrity sha512-e/CWtKLidqkr7sinfIVVcsfcHgnFVlGvuEfKuuPFnxBo+9dZZsmgF8a9Rj7SYJ5LMZ8YBxNY9Ca46eam4ajKtQ==
   dependencies:
     args "^5.0.0"
     chalk "^2.3.2"
