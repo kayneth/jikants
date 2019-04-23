@@ -103,7 +103,7 @@ JikanTS.Season.seasonArchive(s).then(b => console.log(b));
 JikanTS.Season.seasonLater().then(b => console.log(b));
 
 /* TOP */
-JikanTS.Season.topItems("anime", 1, "airing").then(b => console.log(b));
+JikanTS.Top.topItems("anime", 1, "airing").then(b => console.log(b));
 
 /* USER */
 JikanTS.User.animeList("myusername", "all", 1).then(b => console.log(b));
