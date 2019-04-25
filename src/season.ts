@@ -15,7 +15,7 @@ import { api, Logger, queue } from "./utils";
  * @param year - The wanted year
  * @param season - The wanted season
  */
-const seasonAnime = async (year: number, season: Seasons) => {
+const anime = async (year: number, season: Seasons) => {
   try {
     ow(year, ow.number.positive);
 
@@ -32,7 +32,7 @@ const seasonAnime = async (year: number, season: Seasons) => {
 /**
  * Feteches all the years & their respective seasons that can be parsed from MyAnimeList
  */
-const seasonArchive = async () => {
+const archive = async () => {
   try {
     const { body } = await queue.add(
       async () => await api("/season/archive", {})
@@ -47,7 +47,7 @@ const seasonArchive = async () => {
 /**
  * Fetches anime that have been announced for the upcoming seasons
  */
-const seasonLater = async () => {
+const later = async () => {
   try {
     const { body } = await queue.add(
       async () => await api("/season/later", {})
@@ -60,7 +60,7 @@ const seasonLater = async () => {
 };
 
 export default {
-  seasonAnime,
-  seasonArchive,
-  seasonLater
+  anime,
+  archive,
+  later
 };

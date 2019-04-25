@@ -90,7 +90,7 @@ JikanTS.Person.pictures(1).then(b => console.log(b));
 JikanTS.Producer.get(1).then(b => console.log(b));
 
 /* SCHEDULE */
-JikanTS.Schedule.animeSchedule("sunday").then(b => console.log(b));
+JikanTS.Schedule.anime("sunday").then(b => console.log(b));
 
 /* SEARCH */
 JikanTS.Search.search("Blue", "anime", 1, { limit: 1 }).then(b =>
@@ -98,12 +98,12 @@ JikanTS.Search.search("Blue", "anime", 1, { limit: 1 }).then(b =>
 );
 
 /* SEASON */
-JikanTS.Season.seasonAnime(2018, "winter").then(b => console.log(b));
-JikanTS.Season.seasonArchive(s).then(b => console.log(b));
-JikanTS.Season.seasonLater().then(b => console.log(b));
+JikanTS.Season.anime(2018, "winter").then(b => console.log(b));
+JikanTS.Season.archive().then(b => console.log(b));
+JikanTS.Season.later().then(b => console.log(b));
 
 /* TOP */
-JikanTS.Top.topItems("anime", 1, "airing").then(b => console.log(b));
+JikanTS.Top.items("anime", 1, "airing").then(b => console.log(b));
 
 /* USER */
 JikanTS.User.animeList("myusername", "all", 1).then(b => console.log(b));
