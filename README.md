@@ -119,6 +119,8 @@ JikanTS.User.profile("myusername").then(b => console.log(b));
 
 [@Julien-Broyard](https://github.com/Julien-Broyard)
 
+Logo by [@Tobaloidee](https://github.com/Tobaloidee)
+
 ## Contributing
 
 See [the contributing file](contributing.md)!
