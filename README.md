@@ -1,3 +1,5 @@
+<p align="center"><img src="/logo/logotype-horizontal.png"></p>
+
 # jikants
 
 [![Discord Server](https://img.shields.io/discord/460491088004907029.svg?style=flat&logo=discord)](https://discord.gg/4tvCr36)![npm](https://img.shields.io/npm/dm/jikants.svg)[![Netlify Status](https://api.netlify.com/api/v1/badges/369e3e6b-1132-4612-b19a-3090c50cc1a6/deploy-status)](https://app.netlify.com/sites/jikants/deploys)[![Total alerts](https://img.shields.io/lgtm/alerts/g/Julien-Broyard/jikants.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Julien-Broyard/jikants/alerts/)[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Julien-Broyard/jikants.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Julien-Broyard/jikants/context:javascript)
