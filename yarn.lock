@@ -143,7 +143,7 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
-args@^5.0.0:
+args@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/args/-/args-5.0.1.tgz#4bf298df90a4799a09521362c579278cc2fdd761"
   integrity sha512-1kqmFCFsPffavQFGt8OxJdIcETti99kySRUPMpOhaGjL6mRJn8HFU1OxKY5bMqfZKUwTQc1mZkAjmGYaVOHFtQ==
@@ -157,6 +157,11 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
+
+bourne@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/bourne/-/bourne-1.1.2.tgz#e290b5bd7166635632eaf8ef12b006b2d4a75b83"
+  integrity sha512-b2dgVkTZhkQirNMohgC00rWfpVqEi9y5tKM1k3JvoNx05ODtfQoPPd4js9CYFQoY0IM8LAmnJulEuWv74zjUOg==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -213,7 +218,7 @@ camelcase@5.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-5.0.0.tgz#03295527d58bd3cd4aa75363f35b2e8d97be2f42"
   integrity sha512-faqwZqnWxbxn+F1d399ygeamQNy3lPp/H9H6rNrqYh4FSVCtcY+3cub1MxA8o9mDd55mM8Aghuu/kuyYA6VTsA==
 
-chalk@2.4.2, chalk@^2.0.0, chalk@^2.3.0, chalk@^2.3.2:
+chalk@2.4.2, chalk@^2.0.0, chalk@^2.3.0, chalk@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
   integrity sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
@@ -350,11 +355,6 @@ execa@^1.0.0:
     p-finally "^1.0.0"
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
-
-fast-json-parse@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/fast-json-parse/-/fast-json-parse-1.0.3.tgz#43e5c61ee4efa9265633046b770fb682a7577c4d"
-  integrity sha512-FRWsaZRWEJ1ESVNbDWmsAlqDk96gPQezzLghafp5J4GUKjbCz3OkAHuZs5TuPEtkbVQERysLp9xv6c24fBm8Aw==
 
 fast-redact@^1.4.4:
   version "1.5.0"
@@ -802,20 +802,20 @@ path-parse@^1.0.6:
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
   integrity sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==
 
-pino-pretty@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/pino-pretty/-/pino-pretty-2.6.1.tgz#b5a8e28137deb1629428931d98c708b51f0e9555"
-  integrity sha512-e/CWtKLidqkr7sinfIVVcsfcHgnFVlGvuEfKuuPFnxBo+9dZZsmgF8a9Rj7SYJ5LMZ8YBxNY9Ca46eam4ajKtQ==
+pino-pretty@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/pino-pretty/-/pino-pretty-3.0.0.tgz#915a8fb6ecab609535809a08f3e3f0c70dc17409"
+  integrity sha512-OQCKEit08mVgTQbxBZHScNiwdodJIPgxKFPIStQBZXj09yg94h4OHsbgFCotwn7Ew26ASTbaW4CzWFpsBeynhA==
   dependencies:
-    args "^5.0.0"
-    chalk "^2.3.2"
+    args "^5.0.1"
+    bourne "^1.1.2"
+    chalk "^2.4.2"
     dateformat "^3.0.3"
-    fast-json-parse "^1.0.3"
     fast-safe-stringify "^2.0.6"
     jmespath "^0.15.0"
     pump "^3.0.0"
-    readable-stream "^3.0.6"
-    split2 "^3.0.0"
+    readable-stream "^3.3.0"
+    split2 "^3.1.1"
 
 pino-std-serializers@^2.3.0:
   version "2.4.0"
@@ -891,7 +891,7 @@ read-pkg@^5.0.0:
     parse-json "^4.0.0"
     type-fest "^0.4.1"
 
-readable-stream@^3.0.0, readable-stream@^3.0.6:
+readable-stream@^3.0.0, readable-stream@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-3.3.0.tgz#cb8011aad002eb717bf040291feba8569c986fb9"
   integrity sha512-EsI+s3k3XsW+fU8fQACLN59ky34AZ14LoeVZpYwmZvldCFo0r0gnelwF2TcMjLor/BTL5aDJVBMkss0dthToPw==
@@ -1023,7 +1023,7 @@ spdx-license-ids@^3.0.0:
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.4.tgz#75ecd1a88de8c184ef015eafb51b5b48bfd11bb1"
   integrity sha512-7j8LYJLeY/Yb6ACbQ7F76qy5jHkp0U6jgBfJsk97bwWlVUnUWsAgpyaCvo17h0/RQGnQ036tVDomiwoI4pDkQA==
 
-split2@^3.0.0:
+split2@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/split2/-/split2-3.1.1.tgz#c51f18f3e06a8c4469aaab487687d8d956160bb6"
   integrity sha512-emNzr1s7ruq4N+1993yht631/JH+jaj0NYBosuKmLcq+JkGQ9MmTw1RB1fGaTCzUuseRIClrlSLHRNYGwWQ58Q==
