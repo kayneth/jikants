@@ -20,7 +20,7 @@ import { api, Logger, queue } from "./utils";
  */
 const animeList = async (
   username: string,
-  type: AnimeListTypes,
+  type: AnimeListTypes = "all",
   page: number = 1
 ) => {
   try {
@@ -62,7 +62,7 @@ const friends = async (username: string, page: number = 1) => {
  * @param username - Username on MyAnimeList
  * @param type - Anime, Manga or Both
  */
-const history = async (username: string, type: Types) => {
+const history = async (username: string, type: Types = "both") => {
   try {
     if (type === "anime") {
       const anime = await queue.add(
@@ -101,7 +101,7 @@ const history = async (username: string, type: Types) => {
  */
 const mangaList = async (
   username: string,
-  type: MangaListTypes,
+  type: MangaListTypes = "all",
   page: number = 1
 ) => {
   try {

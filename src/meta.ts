@@ -15,8 +15,8 @@ import { api, Logger, queue } from "./utils";
  * @param offset - 1,000 requests are shown per page, you can use the offset to show more
  */
 const requests = async (
-  type: Types,
-  period: Periods,
+  type: Types = "anime",
+  period: Periods = "monthly",
   offset: number = 1000
 ) => {
   try {

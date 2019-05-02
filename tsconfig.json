@@ -13,7 +13,7 @@
     "removeComments": true,
     "resolveJsonModule": true,
     "strict": true,
-    "target": "es5"
+    "target": "es2015"
   },
   "exclude": ["node_modules", "tests/**/*.ts", "dist/**/*.ts"],
   "include": ["src/**/*.ts"]

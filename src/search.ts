@@ -41,6 +41,7 @@ const search = async (
       if (filters.limit) {
         ow(filters.limit, ow.number.positive);
       }
+
       if (filters.score) {
         ow(filters.score, ow.number.positive);
       }

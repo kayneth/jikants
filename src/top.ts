@@ -14,7 +14,11 @@ import { api, Logger, queue } from "./utils";
  * @param page - The Top page on MyAnimeList is paginated offers 50 items per page
  * @param subType - Top items of this subtype
  */
-const items = async (type: Types, page: number = 1, subType?: SubTypes) => {
+const items = async (
+  type: Types = "anime",
+  page: number = 1,
+  subType?: SubTypes
+) => {
   try {
     ow(page, ow.number.positive);
 

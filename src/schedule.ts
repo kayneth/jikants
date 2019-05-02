@@ -7,7 +7,7 @@ import { api, Logger, queue } from "./utils";
 /**
  * Fetches anime schedule of the week or specified day
  */
-const anime = async (day: Days) => {
+const anime = async (day: Days = "monday") => {
   try {
     const { body } = await queue.add(
       async () => await api(`/schedule/${day}`, {})
