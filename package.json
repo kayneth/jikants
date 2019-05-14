@@ -15,6 +15,7 @@
     "p-queue": "^5.0.0",
     "pino": "^5.12.3",
     "pino-pretty": "^3.0.0",
+    "prettier": "^1.17.1",
     "quick-lru": "^4.0.0"
   },
   "description": "A wrapper for the jikan REST API.",
@@ -22,7 +23,6 @@
     "@types/got": "^9.4.4",
     "@types/pino": "^5.8.7",
     "husky": "^2.2.0",
-    "prettier": "^1.17.0",
     "ts-node": "^8.1.0",
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
