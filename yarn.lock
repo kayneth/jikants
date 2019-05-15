@@ -262,13 +262,13 @@ concat-map@0.0.1:
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
 cosmiconfig@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-5.2.0.tgz#45038e4d28a7fe787203aede9c25bca4a08b12c8"
-  integrity sha512-nxt+Nfc3JAqf4WIWd0jXLjTJZmsPLrA9DDc4nRw2KFJQJK7DNooqSXrNI7tzLG50CF8axczly5UV929tBmh/7g==
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-5.2.1.tgz#040f726809c591e77a17c0a3626ca45b4f168b1a"
+  integrity sha512-H65gsXo1SKjf8zmrJ67eJk8aIRKV5ff2D4uKZIBZShbhGSpEmsQOPW/SKMKYhSTrqR7ufy6RP69rPogdaPh/kA==
   dependencies:
     import-fresh "^2.0.0"
     is-directory "^0.3.1"
-    js-yaml "^3.13.0"
+    js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
 cross-spawn@^6.0.0:
@@ -374,9 +374,9 @@ find-up@^3.0.0:
     locate-path "^3.0.0"
 
 flatstr@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/flatstr/-/flatstr-1.0.9.tgz#0950d56fec02de1030c1311847ecd58c25690eb9"
-  integrity sha512-qFlJnOBWDfIaunF54/lBqNKmXOI0HqNhu+mHkLmbaBXlS71PUd9OjFOdyevHt/aHoHB1+eW7eKHgRKOG5aHSpw==
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/flatstr/-/flatstr-1.0.11.tgz#e4215663ccb8a135a549a1d29c543f05e928e785"
+  integrity sha512-CrkRmL8HgArqohPW5udNdtVae+fj5tvJdHwoo91m5OvaLk1a4lqa0R4/aPUO2zbVEnIrk+i5uTVNbSxaR1dQkQ==
 
 fs-extra@^7.0.0:
   version "7.0.1"
@@ -469,7 +469,7 @@ http-cache-semantics@^4.0.0:
   resolved "https://registry.yarnpkg.com/http-cache-semantics/-/http-cache-semantics-4.0.3.tgz#495704773277eeef6e43f9ab2c2c7d259dda25c5"
   integrity sha512-TcIMG3qeVLgDr1TEd2XvHaTnMPwYQUQMIBLy+5pLSDKYFc7UIqj39w8EGzZkaxoLv/l2K8HaI0t5AVA+YYgUew==
 
-husky@^2.2.0:
+husky@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/husky/-/husky-2.3.0.tgz#8b78ed24d763042df7fd899991985d65a976dd13"
   integrity sha512-A/ZQSEILoq+mQM3yC3RIBSaw1bYXdkKnyyKVSUiJl+iBjVZc5LQEXdGY1ZjrDxC4IzfRPiJ0IqzEQGCN5TQa/A==
@@ -548,7 +548,7 @@ js-tokens@^4.0.0:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-js-yaml@^3.13.0:
+js-yaml@^3.13.0, js-yaml@^3.13.1:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
@@ -818,11 +818,11 @@ pino-pretty@^3.0.0:
     split2 "^3.1.1"
 
 pino-std-serializers@^2.3.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/pino-std-serializers/-/pino-std-serializers-2.4.0.tgz#c0588b5ab0905ac55bae2cb61639ed93153681fb"
-  integrity sha512-ysT2ylXu1aEec9k8cm/lz7emBcfpdxFWHqvHeGXf1wvfw7TKPMGhLWwS+ciHw6u4ffnmV+pkAMF4MUIZmZZdSg==
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/pino-std-serializers/-/pino-std-serializers-2.4.1.tgz#7fefc2dba56700494ac8b9ce0d027f7b648e438f"
+  integrity sha512-v/JglhO0aFcvkMV9VUxhgyuJo8K1si857Ww86Tx8H2cjC/kp0ndzzcF6Vbxr4RgKFYJdHfLVpEuD55znMZuxnw==
 
-pino@^5.12.3:
+pino@^5.12.4:
   version "5.12.4"
   resolved "https://registry.yarnpkg.com/pino/-/pino-5.12.4.tgz#80c28027932b7803afba1a88d447e095caba1c7c"
   integrity sha512-In/JKBWClhVjwLnxKF8kbqsQBPxy6BSCkAAJFOf5VOGXC6JKe51YJ0mUn2UF8ro4D9P5e7QUCFf+0TTgIS6BGw==
