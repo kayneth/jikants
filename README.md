@@ -19,6 +19,7 @@
 ## Todo
 
 TODO : Improve interfaces
+TODO : Add Throttling
 
 ## Install
 
