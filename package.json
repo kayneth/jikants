@@ -13,8 +13,8 @@
     "ow": "^0.12.0",
     "p-memoize": "^3.1.0",
     "p-queue": "^5.0.0",
-    "pino": "^5.12.5",
-    "pino-pretty": "^3.0.1",
+    "pino": "^5.12.6",
+    "pino-pretty": "^3.1.0",
     "prettier": "^1.17.1",
     "quick-lru": "^4.0.0"
   },
@@ -23,7 +23,6 @@
     "@types/got": "^9.4.4",
     "@types/pino": "^5.8.7",
     "husky": "^2.3.0",
-    "ts-node": "^8.1.0",
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
     "typedoc": "^0.14.2",
