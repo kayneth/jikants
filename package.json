@@ -21,7 +21,7 @@
   "description": "A wrapper for the jikan REST API.",
   "devDependencies": {
     "@types/got": "^9.4.4",
-    "@types/pino": "^5.8.7",
+    "@types/pino": "^5.8.8",
     "husky": "^2.3.0",
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
