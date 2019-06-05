@@ -769,9 +769,9 @@ p-memoize@^3.1.0:
     mimic-fn "^2.1.0"
 
 p-queue@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/p-queue/-/p-queue-6.0.0.tgz#00308b2e1a566130b835a2cce84ce8cfd76df08d"
-  integrity sha512-Ql8yUy0yg2iyTZ8lt/3OILuVJAwl9JipQlSSbnIiReJ+UiVIkrDGcAc9UBEMwxBF/BLpmYkmZBqJBZk4F6kjRQ==
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/p-queue/-/p-queue-6.0.1.tgz#de0e833a57a8a77e89d8d6cd91a5a8c3993b54be"
+  integrity sha512-9Y06Mp2GkJsuH7SApSXK7CDf34ZSu09tPDI3bM4z+EiX6X4lYzZBNS7zlh6Pe550Ya906JQo834iVjKcDOsqqA==
   dependencies:
     eventemitter3 "^3.1.0"
     p-timeout "^3.1.0"
