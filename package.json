@@ -22,11 +22,11 @@
   "devDependencies": {
     "@types/got": "^9.4.4",
     "@types/pino": "^5.8.8",
-    "husky": "^2.4.0",
+    "husky": "^2.4.1",
     "tslint": "^5.17.0",
     "tslint-config-prettier": "^1.18.0",
     "typedoc": "^0.14.2",
-    "typescript": "^3.5.1"
+    "typescript": "^3.5.2"
   },
   "files": [
     "dist/**/*"
