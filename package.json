@@ -12,7 +12,7 @@
     "got": "^9.6.0",
     "ow": "^0.13.2",
     "p-memoize": "^3.1.0",
-    "p-queue": "^6.0.2",
+    "p-queue": "^6.1.0",
     "pino": "^5.12.6",
     "pino-pretty": "^3.2.0",
     "prettier": "^1.18.2",
@@ -20,13 +20,13 @@
   },
   "description": "A wrapper for the jikan REST API.",
   "devDependencies": {
-    "@types/got": "^9.6.0",
+    "@types/got": "^9.6.1",
     "@types/pino": "^5.8.8",
-    "husky": "^2.5.0",
+    "husky": "^3.0.0",
     "tslint": "^5.18.0",
     "tslint-config-prettier": "^1.18.0",
     "typedoc": "^0.14.2",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.3"
   },
   "files": [
     "dist/**/*"
